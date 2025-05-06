@@ -1,0 +1,17 @@
+td {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+td button {
+  height: 100%;
+  width: 100%;
+}
+
+#restartGame {
+  margin-right: 5px;
+  margin-top: 5px;
+}
