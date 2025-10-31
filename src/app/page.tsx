@@ -1,17 +1,12 @@
 "use client";
 import Puzzle from "@/components/puzzle";
+import { getWinMessage } from "@/lib/win";
 import React from "react";
 
 export default function Home() {
   const [didWin, setDidWin] = React.useState<boolean>(false);
   const [message, setMessage] = React.useState<string>("");
-  React.useEffect(() => {
-    if (didWin) {
-      setMessage("Puzzle successfully reordered.  You win!");
-    } else {
-      setMessage("");
-    }
-  }, [didWin]);
+  React.useEffect(() => setMessage(getWinMessage(didWin)), [didWin]);
 
   return (
     <>

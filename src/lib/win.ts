@@ -11,3 +11,10 @@ export function checkForWin(gameState: number[][]) {
   }
   return true;
 }
+
+export function getWinMessage(didWin: boolean) {
+  if (didWin) {
+    return "Puzzle successfully reordered.  You win!";
+  }
+  return "";
+}
